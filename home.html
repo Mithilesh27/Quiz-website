@@ -25,23 +25,33 @@
             display: grid;
             place-items: center;
             /* background-color: rgb(232, 199, 253); */
-            background-color: rgba(201, 253, 253, 0.678);;
+            /* background-color: hsl(206, 92%, 94%); */
+            /* background-color: #a4b0be; */
+            /* background-color: #ffcccc; */
+            background-color: #cd84f1bb;
 
         }
 
-        .innerdiv {
+        .maindiv {
             width: 700px;
             min-height: 300px;
             /* background-color: rgb(232, 199, 253); */
-            background-color: rgb(255, 255, 255);
+            background-color: #f1f2f6;
             padding: 30px;
             border-radius: 8px;
             font-size: 20px;
             /* font-family: 'Noto Sans', sans-serif;*/
 
-             font-family: 'Open Sans', sans-serif;
+            font-family: 'Open Sans', sans-serif;
             box-shadow: 0px 16px 15px -9px rgba(150, 150, 150, 1);
         }
+
+
+        .questionBox {
+            padding: 1rem;
+            text-align: center;
+        }
+
 
         ul {
             list-style-type: none;
@@ -50,35 +60,56 @@
 
         ul li {
             padding: 5px;
+            width: 600px;
         }
 
 
-        ul li :hover{
+        ul li :hover {
             cursor: pointer;
         }
 
-        .questionBox{
-            padding: 1rem;
-            text-align: center;
-        }
+       
 
-        button{
+        button {
 
             padding: .5rem 2rem;
-            font-size: 1rem;
+            font-size: 1.5rem;
+
+
             border: none;
-            
+
         }
 
-        button:hover{
+        button:hover {
             cursor: pointer;
+            font-size: 1.5rem;
+
 
         }
 
-        div#submitbox{
+        div#submitBox {
             text-align: center;
         }
 
+        .scoreBox {
+            text-align: center;
+            font-size: 1.5rem;
+            background-color: #badc58;
+            border-radius: 3px;
+            padding: 2rem;
+            margin: 5px auto;
+            box-shadow: 0px 16px 15px -9px rgba(150, 150, 150, 1);
+
+
+        }
+
+        .scoreBox p {
+            margin-bottom: 10px;
+        }
+
+        .showScoreBox {
+            display: none;
+        }
     </style>
 </head>
 
@@ -87,38 +118,46 @@
     <div class="wrapper">
 
 
-        <div class="innerdiv">
+        <div class="maindiv">
             <div class="questionBox">
 
                 <h1>Is this the question??</h1>
             </div>
 
-            <ul>
-                <li>
-                    <input type="radio" name="answer" id="ans1" class="answer">
-                    <label for="ans1">Option A</label>
-                </li>
-                <li>
-                    <input type="radio" name="answer" id="ans2" class="answer">
-                    <label for="ans2">Option B</label>
+            <div class="answerBox">
+                <ul>
+                    <li>
+                        <input type="radio" name="answer" id="ans1" class="answer">
+                        <label for="ans1" id="option1">Option A</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="answer" id="ans2" class="answer">
+                        <label for="ans2" id="option2">Option B</label>
 
-                </li>
-                <li>
-                    <input type="radio" name="answer" id="ans3" class="answer">
-                    <label for="ans3">Option C</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="answer" id="ans3" class="answer">
+                        <label for="ans3" id="option3">Option C</label>
 
-                </li>
-                <li>
-                    <input type="radio" name="answer" id="ans4" class="answer">
-                    <label for="ans4">Option D</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="answer" id="ans4" class="answer">
+                        <label for="ans4" id="option4">Option D</label>
 
-                </li>
+                    </li>
 
-            </ul>
+                </ul>
+            </div>
 
-            <div id="submitbox">
+            <div id="submitBox">
 
                 <button id="submit">Submit</button>
+            </div>
+
+            <div class="scoreBox  ">
+
+                <p>Your Score is 5/10 </p>
+                <button>Play Again</button>
             </div>
 
 
